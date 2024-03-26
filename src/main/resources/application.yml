@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: candidates-service
+  jackson:
+    default-property-inclusion: non_null
+    property-naming-strategy: SNAKE_CASE
+  datasource:
+    url: jdbc:mysql://localhost:3306/candidates_db
+    username: root
+    password: root
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+security:
+  jwt:
+    secret-key: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+    expiration-time: 3600000
